@@ -22,7 +22,7 @@ app.use(cookieParser());
 //Cors => cross origin resource sharing
 app.use(
     cors({
-        origin: ['http://localhost:3000'],
+        origin: ['https://how2code-client-production.up.railway.app'],
         credentials: true,
     }),
 );
