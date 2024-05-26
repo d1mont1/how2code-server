@@ -17,4 +17,4 @@ COPY . .
 RUN npm run build
 
 # Запуск приложения
-CMD ["node", "dist/server.js"]
+CMD ["node", "build/server.js"]
