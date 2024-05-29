@@ -147,6 +147,6 @@ const courseSchema = new Schema<ICourse>(
     { timestamps: true },
 );
 
-const courseModel: Model<ICourse> = mongoose.model('Course', courseSchema);
+export const courseModel: Model<ICourse> = mongoose.model('Course', courseSchema);
 
 export default courseModel;

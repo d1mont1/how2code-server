@@ -3,7 +3,7 @@ require('dotenv').config();
 
 const dbUrl: string = process.env.DB_URL || '';
 
-const connectDB = async () => {
+export const connectDB = async () => {
     try {
         await mongoose.connect(dbUrl).then((data: any) => {
             console.log(`MongoDB connected with server: ${data.connection.host}`);
