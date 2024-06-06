@@ -76,8 +76,8 @@ exports.createOrder = (0, catchAsyncError_1.catchAsyncError)(async (req, res, ne
         await redis_1.redis.set(req.user?._id, JSON.stringify(user));
         await notification_model_1.default.create({
             user: user?._id,
-            title: 'New Order',
-            message: `You have a new order from ${course?.name}`,
+            title: 'Новая покупка',
+            message: `Произведена покупка курса ${course?.name}`,
         });
         if (course.purchased !== undefined)
             course.purchased += 1;

@@ -23,6 +23,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.courseModel = void 0;
 const mongoose_1 = __importStar(require("mongoose"));
 const reviewSchema = new mongoose_1.Schema({
     user: Object,
@@ -106,5 +107,5 @@ const courseSchema = new mongoose_1.Schema({
         default: 0,
     },
 }, { timestamps: true });
-const courseModel = mongoose_1.default.model('Course', courseSchema);
-exports.default = courseModel;
+exports.courseModel = mongoose_1.default.model('Course', courseSchema);
+exports.default = exports.courseModel;

@@ -93,8 +93,8 @@ export const createOrder = catchAsyncError(
 
             await notificationModel.create({
                 user: user?._id,
-                title: 'New Order',
-                message: `You have a new order from ${course?.name}`,
+                title: 'Новая покупка',
+                message: `Произведена покупка курса ${course?.name}`,
             });
 
             if (course.purchased !== undefined) course.purchased += 1;

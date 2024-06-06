@@ -227,8 +227,8 @@ export const addQuestion = catchAsyncError(
 
             await notificationModel.create({
                 user: req.user?._id,
-                title: 'New Question Received',
-                message: `You have a new question in ${courseContent.title}`,
+                title: 'Новый вопрос',
+                message: `У вас есть новый вопрос в курсе ${courseContent.title}`,
             });
 
             //Сохранение обновленного курса

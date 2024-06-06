@@ -167,8 +167,8 @@ exports.addQuestion = (0, catchAsyncError_1.catchAsyncError)(async (req, res, ne
         courseContent.questions.push(newQuestion);
         await notification_model_1.default.create({
             user: req.user?._id,
-            title: 'New Question Received',
-            message: `You have a new question in ${courseContent.title}`,
+            title: 'Новый вопрос',
+            message: `У вас есть новый вопрос в курсе ${courseContent.title}`,
         });
         //Сохранение обновленного курса
         await course?.save();
